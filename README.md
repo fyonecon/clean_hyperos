@@ -497,9 +497,9 @@ adb push ../android_backup/OS/RedmiNote14Pro-CN-malachite-ota_full-OS2.0.10.0.VO
 
 # 一次性运行代码
 
-```
-
 adb push ../android_backup/ /sdcard/Download/ ;
+
+```
 
 adb shell pm uninstall --user 10 com.android.browser;
 
@@ -585,7 +585,7 @@ adb shell pm uninstall --user 10 com.miui.securitycenter.securitycenter_phone_ov
 
 adb shell pm uninstall --user 10 com.android.quicksearchbox;
 
-adb shell pm uninstall --user 0 com.xiaomi.digitalkey;
+adb shell pm uninstall --user 10 com.xiaomi.digitalkey;
 
 adb shell pm uninstall --user 10 com.miui.voicetrigger
 
