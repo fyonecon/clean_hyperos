@@ -5,7 +5,7 @@
 
 更新时间：2026-04-01，适配os1、os2、os3 ，可能仅限国行版。
 
-教程地址： https://github.com/fyonecon/android-clean_hyperos 。
+教程地址： https://github.com/fyonecon/clean_hyperos 。
 
 # 基础设置与安全说明：
 
