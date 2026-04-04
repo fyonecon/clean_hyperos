@@ -9,6 +9,8 @@
 
 原创教程地址： https://github.com/fyonecon/clean_hyperos 。
 
+=============================
+
 # 基础设置与安全说明：
 
 1️⃣ 使用前备份好手机资料；
@@ -415,6 +417,8 @@ Google电话、Google短信、Google Photo、微信、Yahoo天气、windy、Oned
 
 ## 25. 最后，如果玩机玩累了，请转到其他家的手机。
 
+=============================
+
 # 恢复已删除App、系统数据清除等：
 
 1️⃣ 恢复已删除的预装应用举例：
@@ -503,7 +507,7 @@ adb push ../android_backup/OS/RedmiNote14Pro-CN-malachite-ota_full-OS2.0.10.0.VO
 
 ============================
 
-# 一次性运行代码
+# 一次性运行代码（注意这里是用户 10 ，不是 0 ）
 
 adb push ../android_backup/ /sdcard/Download/ ;
 
@@ -623,7 +627,7 @@ adb shell pm uninstall --user 10 com.sohu.inputmethod.sogou.xiaomi;
 
 adb shell pm uninstall --user 10 com.xiaomi.market;
 
-adb shell pm uninstall --user 0 com.android.traceur;
+adb shell pm uninstall --user 10 com.android.traceur;
 
 ```
 
