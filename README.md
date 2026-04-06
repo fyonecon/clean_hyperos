@@ -31,6 +31,8 @@ com.miui.packageinstaller 应用包管理器不要卸载（重启卡米）；
 
 com.xiaomi.metoknlp 网络位置不要卸载（切换系统明暗主题时会卡米）;
 
+com.xiaomi.location.fused 小米融合位置不要卸载（切换系统明暗主题时会卡米）;
+
 com.miui.miwallpaper 小米壁纸（屏幕直接黑屏，任何东西都看不到）;
 
 ```
@@ -346,8 +348,6 @@ ver #微信指纹支付
 #adb shell pm uninstall --user 0 com.miui.core #MIUI SDK（自动安装系统软件、SDK等）
 
 #adb shell pm uninstall --user 0 com.miui.core.internal.services #（绑定在Android系统中，实际用途未找到未明确）
-
-#adb shell pm uninstall --user 0 com.xiaomi.location.fused #小米融合位置（卸载后定位变慢，与“com.android.location.fused”不一样。）
 
 #adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi #搜狗输入法（微信输入法、GBoard输入法代替）
 
