@@ -7,8 +7,6 @@
 
 #=======================适合CN=====================
 
-adb shell pm uninstall --user 12 com.android.browser;
-
 adb shell pm uninstall --user 12 com.miui.yellowpage;
 
 adb shell pm uninstall --user 12 com.miui.hybrid;
@@ -146,6 +144,7 @@ adb shell pm uninstall --user 12 com.android.camera;
 
 #==========================适合国际==================
 
+#adb shell pm uninstall --user 12 com.android.browser;
 #adb shell pm uninstall --user 12 com.android.mms;
 #adb shell pm uninstall --user 12 com.sohu.inputmethod.sogou.xiaomi;
 #adb shell pm uninstall --user 12 com.xiaomi.market;
