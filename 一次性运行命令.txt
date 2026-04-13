@@ -1,0 +1,160 @@
+
+⚠️注意用户标号是12，一般主用户是[0]，多系统用户是[10, 11, 12, 13]。
+⚠️可用[adb shell am get-current-user]查看当前用户标号。
+⚠️粘贴到adb-cmd里面可以一次性全部运行。
+
+更新于2026-04-13。适配HyperOS 1/2/3。
+
+#=======================适合CN=====================
+
+adb shell pm uninstall --user 12 com.android.browser;
+
+adb shell pm uninstall --user 12 com.miui.yellowpage;
+
+adb shell pm uninstall --user 12 com.miui.hybrid;
+
+adb shell pm uninstall --user 12 com.miui.analytics;
+
+adb shell pm uninstall --user 12 com.miui.systemAdSolution;
+
+adb shell pm uninstall --user 12 com.miui.guardprovider;
+
+adb shell pm uninstall --user 12 com.miui.bugreport;
+
+adb shell pm uninstall --user 12 com.miui.securityadd;
+
+adb shell pm uninstall --user 12 com.xiaomi.gamecenter.sdk.service;
+
+adb shell pm uninstall --user 12 com.xiaomi.gamecenter;
+
+adb shell pm uninstall --user 12 com.xiaomi.macro;
+
+adb shell pm uninstall --user 12 com.miui.misightservice;
+
+adb shell pm uninstall --user 12 com.xiaomi.security.onetrack;
+
+adb shell pm uninstall --user 12 com.android.traceur;
+
+adb shell pm uninstall --user 12 com.xiaomi.joyose;
+
+adb shell pm uninstall --user 12 com.xiaomi.mtb;
+
+adb shell pm uninstall --user 12 com.mobiletools.systemhelper;
+
+adb shell pm uninstall --user 12 com.miui.daemon;
+
+adb shell pm uninstall --user 12 com.miui.powerkeeper;
+
+adb shell pm uninstall --user 12 com.miui.miservice;
+
+adb shell pm uninstall --user 12 com.milink.service;
+
+adb shell pm uninstall --user 12 com.xiaomi.mi_connect_service;
+
+adb shell pm uninstall --user 12 com.miui.carlink;
+
+adb shell pm uninstall --user 12 com.xiaomi.ab;
+
+adb shell pm uninstall --user 12 com.miui.phrase;
+
+adb shell pm uninstall --user 12 com.miui.contentcatcher;
+
+adb shell pm uninstall --user 12 com.xiaomi.payment;
+
+adb shell pm uninstall --user 12 com.unionpay.tsmservice.mi;
+
+adb shell pm uninstall --user 12 com.wapi.wapicertmanager;
+
+adb shell pm uninstall --user 12 com.miui.thirdappassistant;
+
+adb shell pm uninstall --user 12 com.android.adservices.api;
+
+adb shell pm uninstall --user 12 com.miui.mishare.connectivity;
+
+adb shell pm uninstall --user 12 com.miui.nextpay;
+
+adb shell pm uninstall --user 12 com.android.healthconnect.controller;
+
+adb shell pm uninstall --user 12 com.google.android.configupdater;
+
+adb shell pm uninstall --user 12 com.miui.touchassistant;
+
+adb shell pm uninstall --user 12 com.miui.contentextension;
+
+adb shell pm uninstall --user 12 com.miui.accessibility;
+
+adb shell pm uninstall --user 12 com.miui.mediaviewer;
+
+adb shell pm uninstall --user 12 com.miui.greenguard;
+
+adb shell pm uninstall --user 12 com.xiaomi.bluetooth;
+
+adb shell pm uninstall --user 12 com.xiaomi.digitalkey;
+
+adb shell pm uninstall --user 12 com.xiaomi.continuity.sdkapp;
+
+adb shell pm uninstall --user 12 com.miui.wmsvc;
+
+adb shell pm uninstall --user 12 com.miui.autoui.ext;
+
+adb shell pm uninstall --user 12 com.mi.AutoTest;
+
+adb shell pm uninstall --user 12 com.tencent.soter.soterserver;
+
+adb shell pm uninstall --user 12 com.miui.tsmclient;
+
+adb shell pm uninstall --user 12 com.xiaomi.xmsf;
+
+adb shell pm uninstall --user 12 com.xiaomi.xmsfkeeperl;
+
+adb shell pm uninstall --user 12 com.miui.corel;
+
+adb shell pm uninstall --user 12 com.miui.core.internal.servicesl;
+
+adb shell pm uninstall --user 12 com.miui.securitycenter.securitycenter_phone_overlay.config.overlay;
+
+adb shell pm uninstall --user 12 com.android.contacts;
+
+adb shell pm uninstall --user 12 com.android.updater;
+
+adb shell pm uninstall --user 12 com.android.quicksearchbox;
+
+adb shell pm uninstall --user 12 com.miui.personalassistant;
+
+adb shell pm uninstall --user 12 com.miui.voicetrigger;
+
+adb shell pm uninstall --user 12 com.miui.voiceassist;
+
+adb shell pm uninstall --user 12 com.xiaomi.aicr;
+
+adb shell pm uninstall --user 12 com.xiaomi.aireco;
+
+adb shell pm uninstall --user 12 com.xiaomi.aiasst.vision;
+
+adb shell pm uninstall --user 12 com.xiaomi.scanner;
+
+adb shell pm uninstall --user 12 com.xiaomi.aiasst.service;
+
+adb shell pm uninstall --user 12 com.miui.cloudbackup;
+
+adb shell pm uninstall --user 12 com.miui.cloudservice;
+ 
+adb shell pm uninstall --user 12 com.xiaomi.micloud.sdk;
+
+adb shell pm uninstall --user 12 com.miui.micloudsync;
+
+adb shell pm uninstall --user 12 com.xiaomi.account;
+
+
+#==========================适合国际==================
+
+#adb shell pm uninstall --user 12 com.android.mms;
+#adb shell pm uninstall --user 12 com.sohu.inputmethod.sogou.xiaomi;
+#adb shell pm uninstall --user 12 com.xiaomi.market;
+#adb shell pm uninstall --user 12 com.android.providers.downloads;
+#adb shell pm uninstall --user 12 com.xiaomi.xmsfkeeper;
+#adb shell pm uninstall --user 12 com.xiaomi.xmsf;
+#adb shell pm uninstall --user 12 com.lbe.security.miui;
+#adb shell pm uninstall --user 12 com.miui.securitycenter;
+
+#============================================
