@@ -103,10 +103,6 @@ adb shell pm uninstall --user 12 com.tencent.soter.soterserver;
 
 adb shell pm uninstall --user 12 com.miui.tsmclient;
 
-adb shell pm uninstall --user 12 com.xiaomi.xmsf;
-
-adb shell pm uninstall --user 12 com.xiaomi.xmsfkeeperl;
-
 adb shell pm uninstall --user 12 com.miui.corel;
 
 adb shell pm uninstall --user 12 com.miui.core.internal.servicesl;
