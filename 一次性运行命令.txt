@@ -145,6 +145,8 @@ adb shell pm uninstall --user 12 com.miui.micloudsync;
 
 adb shell pm uninstall --user 12 com.xiaomi.account;
 
+adb shell pm uninstall --user 12 com.android.camera;
+
 
 #==========================适合国际==================
 
