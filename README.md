@@ -1,7 +1,7 @@
 
 # 《小米手机系统优化对照表及说明》
 
-更新时间：2026-04-13，适配HyperOS1、HyperOS2、HyperOS3 ，可能仅限国行版。
+更新时间：2026-04-22，适配HyperOS1、HyperOS2、HyperOS3 ，可能仅限国行版。
 
 本教程实操先优化“已开启小米系统优化”情况下的手机系统，期间或逐步对比并说明“关闭小米手机系统优化”情况下的手机系统功能变化。
 
@@ -428,7 +428,12 @@ Google电话、Google短信、Google Photo、微信、Yahoo天气、windy、Oned
 
 ## 24. Firefox或三星浏览器添加vivo H5应用商店（ https://h5.appstore.vivo.com.cn ）到桌面快捷方式。
 
-## 25. 最后，如果玩机玩累了，请转到其他家的手机。
+## 25. 这里做一个关于“国内 OAID”和“Google ADID”的说明：
+- 这两个ID都可以跨App追踪用户，实现用户“隐私与广告”跨App互通。
+- 删除OAID：adb删除“com.miui.securitycenter”即可永久关闭OAID。
+- 删除Google ADID：在“Google Services”软件里找“Ads”，选择“删除”即可永久关闭ADID。
+
+## 26. 最后，如果玩机玩累了，请转到其他家的手机。
 
 =============================
 
@@ -536,7 +541,7 @@ adb push ../android_backup/OS/RedmiNote14Pro-CN-malachite-ota_full-OS2.0.10.0.VO
 
 如何设置“分身用户”锁屏密码：：设置-密码安全-手机分身-（管理）
 
-⚠️“分身用户”在使用几天后可能遇到锁屏密码失效的问题，建议使用“多用户”。
+⚠️“分身用户”在使用几天后可能遇到锁屏密码失效的问题，建议使用“Multi User 多用户”。
 
 
 ============================
