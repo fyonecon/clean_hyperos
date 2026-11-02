@@ -34,9 +34,9 @@
 
 - “关机（可长按 音量上+开关键 10s中关机），音量上+开关键 长按（大概10s），Logo出来立即只松开开关键，就可以进入清除模式。”；
 
-### 2. 下面系统优化的操作旨在“提高系统隐私（如广告SDK、反诈、大数据统计）、删除系统广告、精简系统”，不会注重省电和延长手机使用时间（隔夜消耗4%左右的电）、不会帮助你Root破解手机、不会帮助你规避法律；
+### 2. 下面系统优化的操作旨在“提高系统隐私（如广告SDK、反诈、大数据统计）、删除系统广告、精简系统、更接近原生Android”，不会注重省电和延长手机使用时间（隔夜消耗4%左右的电，不联网也会消耗这么多电）、不会帮助你Root破解手机；
 
-### 3. 可以在“澎湃1、澎湃2”中使用，操作前请备份手机数据到“云盘”或“手机以外的硬盘”，因为小米手机卡米变砖数据会彻底丢失；
+### 3. 可以在“澎湃1、澎湃2、澎湃3”中使用，操作前请备份手机数据到“云盘”或“手机以外的硬盘”，因为小米手机卡米变砖数据会彻底丢失。可能不适用于澎湃4，这需要你自己甄别和尝试；
 
 ### 4. ⚠️如下情况会卡米，不要操作⚠️：
 ```
@@ -66,9 +66,9 @@ com.miui.miwallpaper 小米壁纸（屏幕直接黑屏，任何东西都看不�
 
 ### 6. 澎湃2比澎湃1好用，推荐澎湃2；澎湃3比澎湃2好用，推荐澎湃3。使用本教程从2升级到3重启时可能会卡米，建议先手动备份2文件系统到电脑里面，再升级到3；
 
-### 7. 虚拟内存可以关闭或只设置为扩展4G，因为使用感知不强；基于Android16的HyperOS3无内置16KB页面固件，只能运行4KB页面。
+### 7. 虚拟内存可以关闭或只设置为扩展4G，因为使用感知不强；开了多用户系统时请开启虚拟内存到8G。这有利于多系统软件切换后保活；基于Android16的HyperOS3无内置16KB页面固件，只能运行4KB页面。
 
-### 8. ⚠️关于权限“应用列表”、“设备ID、广告ID”，不管你是否用HyperOS权限管理还是Android权限管理，大陆App都可能获得的到，不管你是否手动设置拒绝、是否在Play商店里下载。（微信、JD、PDD不会获得）。
+### 8. ⚠️关于权限“应用列表”、“设备ID、广告ID”，不管你是否用HyperOS权限管理还是Android权限管理，大陆App都可能获得的到，不管你是否手动设置拒绝、是否在Play商店里下载。（微信、JD、PDD不会暗地里获得应用列表）。
 
 ### 9. 常用手机设置，根据你的需要设置即可：
 
@@ -102,16 +102,16 @@ com.miui.miwallpaper 小米壁纸（屏幕直接黑屏，任何东西都看不�
 
 - 电话中拨号：
 
-    显示5G开关：
+    显示 5G 开关（手动切换到4G网络模式下用，一直默认5G太费电了）：
     ```
     *#*#54638#*#*
     ```
-    显示VoLTE开关：
+    显示 4G VoLTE 开关：
     ```
     *#*#86583#*#*
     ```
 
-- 设置-更多设置-内存扩展-关闭，然后根据提示重启手机
+- 「可选」设置-更多设置-内存扩展-关闭，然后根据提示重启手机
 
 
 ------
@@ -141,9 +141,9 @@ com.miui.miwallpaper 小米壁纸（屏幕直接黑屏，任何东西都看不�
 - ⚠️设置-开发者模式-“系统优化”（os1、os2中可以直接看到，os3中连续点击“开发者模式-自动填充-重置为默认值”3次可以看到。）-关闭。
 
   关闭“系统优化”后会出现：
-    - “app安装”变成android原生安装器 < 后经过使用发现，这功能还不一定成立。。 >；
+    - “app安装”变成android原生安装器 < 后经过使用发现，这功能还不一定成立，因为澎湃系统OS中含有某种未证实的多系统用户策略，比如第一个多用户的功能会被限制。。 >；
     - 字体设置可能失效或不能更改 < 后经过软件分析发现，人为Bug。。 >；
-    - 主题图标产生异常（小米自带app图标异常，反而别的应用可能是正常的，怀疑是小米故意恶心人 < 后经过软件分析发现，软件中的众多功能没有解耦。。 > ）；
+    - 主题图标产生异常（仅限小米桌面App中，小米自带app图标异常，反而别的应用可能是正常的，怀疑是小米故意恶心人 < 后经过软件分析发现，小米桌面App软件中的众多功能没有解耦。。 > ）；
     - 小米权限管理变成android原生权限管理（应用列表权限原生安卓中无此功能，而国内有 < 后经过系统和软件分析发现，这是社会主义特色。。 > ）；
     - 应用自启设置不了，需要设置的话，可以恢复开启“小米系统优化”，设置好后再关闭“小米系统优化” < 后经过系统结构分析发现，这是“一SYS两制”。。 > 。
 
@@ -230,7 +230,7 @@ adb push ../android_backup/Files/APK.zip /sdcard/Documents/
 
 # <a id="no-3"></a>三、用ADB删除系统应用（⚠️⚠️⚠️“#”为暂时不要删除的应用，“#”越多，越不建议删⚠️⚠️⚠️）： 
 
-### 1. 获取当前安卓的用户标记，对多用户系统同样有用（如，0 、10 ）：
+### 1. 获取当前安卓的用户标记，对多用户系统同样有用（如，0 、10、11 ）：
 
 ```
 adb shell am get-current-user
@@ -244,7 +244,7 @@ adb shell pm uninstall --user 0 com.android.browser #小米浏览器
 
 adb shell pm uninstall --user 0 com.miui.yellowpage #生活黄页(小米黄页)
 
-adb shell pm uninstall --user 0 com.miui.hybrid #快应用服务框架(小米社区)
+adb shell pm uninstall --user 0 com.miui.hybrid #快应用服务框架
 
 adb shell pm uninstall --user 0 com.miui.analytics #小米广告分析
 
@@ -265,6 +265,8 @@ adb shell pm uninstall --user 0 com.xiaomi.macro #自动连招
 adb shell pm uninstall --user 0 com.miui.misightservice #系统质量检测（os3中有）
 
 adb shell pm uninstall --user 0 com.xiaomi.security.onetrack #用户数据收集与统计
+
+adb shell pm uninstall --user 0 com.mobiletools.systemhelper #智能系统优化（含有百度地图SDK）
 
 ```
 
@@ -297,8 +299,6 @@ adb shell pm uninstall --user 0 com.android.traceur #系统进程追踪
 adb shell pm uninstall --user 0 com.xiaomi.joyose #小米性能云控
 
 adb shell pm uninstall --user 0 com.xiaomi.mtb #鲁班MTB（系统性能调节）
-
-adb shell pm uninstall --user 0 com.mobiletools.systemhelper #智能系统优化（含有百度地图SDK）
 
 adb shell pm uninstall --user 0 com.miui.daemon #系统质量服务（匿名数据收集）
 
@@ -410,7 +410,7 @@ adb shell pm uninstall --user 0 com.android.quicksearchbox #桌面搜索
 
 #######adb shell pm uninstall --user 0 com.miui.personalassistant #桌面负一屏（小米小部件、安卓小部件、负一平智能助理）
 
-##########################adb shell pm uninstall --user 0 com.miui.home #⚠️小米桌面（可以用第三方桌面<如 https://lawnchair.app/ >替代。但是“最近任务、导航栏”消失）
+##########################adb shell pm uninstall --user 0 com.miui.home #⚠️小米桌面（可以用第三方桌面<如 https://lawnchair.app/ >替代。但是“最近任务、导航栏”消失。别删！）
 
 ```
 
@@ -585,6 +585,7 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
     查看“Connection Status”是否是“Connected”，是则已激活；
 
 - 保证“省电策略会不要杀掉 GMS 后台”，Google Play和对应App要加入到“不限制后台”。
+- 如果注册了FCN的app消息推送出现不及时的情况，锁屏10s+再解锁屏幕一次就好了。
 
 
 ------
@@ -642,7 +643,7 @@ adb shell cmd package install-existing com.miui.home #小米桌面
 
 ```
 
-### 2. 禁用和恢复禁用的命令：
+### 2. 禁用和恢复禁用的命令（在OS4中的唯一用法，OS1、OS2、OS3中不推荐。）：
 ```
 禁用：
 adb shell pm disable-user --user 0 [应用包名]
