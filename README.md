@@ -240,17 +240,17 @@ adb shell am get-current-user
 
 ```
 
-adb shell pm uninstall --user 0 com.android.browser #小米浏览器
+adb shell pm uninstall --user 0 com.android.browser #小米浏览器（含有网址审查）
 
 adb shell pm uninstall --user 0 com.miui.yellowpage #生活黄页(小米黄页)
 
-adb shell pm uninstall --user 0 com.miui.hybrid #快应用服务框架
+adb shell pm uninstall --user 0 com.miui.hybrid #快应用服务框架（野蛮广告）
 
 adb shell pm uninstall --user 0 com.miui.analytics #小米广告分析
 
 adb shell pm uninstall --user 0 com.miui.systemAdSolution #小米系统广告解决方案
 
-adb shell pm uninstall --user 0 com.miui.guardprovider #反诈
+adb shell pm uninstall --user 0 com.miui.guardprovider #上报反诈中心
 
 adb shell pm uninstall --user 0 com.miui.bugreport #用户bug反馈
 
@@ -266,7 +266,7 @@ adb shell pm uninstall --user 0 com.miui.misightservice #系统质量检测（os
 
 adb shell pm uninstall --user 0 com.xiaomi.security.onetrack #用户数据收集与统计
 
-adb shell pm uninstall --user 0 com.mobiletools.systemhelper #智能系统优化（含有百度地图SDK）
+adb shell pm uninstall --user 0 com.mobiletools.systemhelper #注册机主手机号、位置、硬件等用于信息收集（含有百度地图SDK）
 
 ```
 
