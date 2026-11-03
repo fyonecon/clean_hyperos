@@ -585,7 +585,7 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
     查看“Connection Status”是否是“Connected”，是则已激活；
 
 - 保证“省电策略会不要杀掉 GMS 后台”，Google Play和对应App要加入到“不限制后台”。
-- 如果注册了FCN的app消息推送出现不及时的情况，锁屏10s+再解锁屏幕一次就好了。
+- 如果注册了FCM的app消息推送出现不及时的情况，锁屏10s+再解锁屏幕一次就好了。
 
 
 ------
