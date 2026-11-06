@@ -13,6 +13,8 @@
 
 - 本教程含有大量注释说明，需要花费大量时间阅读与理解。
 
+- 【万能方法】如果你不想看本教程，不知道你是哪个系统版本，不会知道哪家安卓手机，也不想删除或冻结系统软件，可以用快速路径优化你的系统（拦截任何广告、阻断隐私安全），安装 BlockADs（开源+免费）https://blockads.pwhs.app 。
+
 ### 大纲：
 
 - [一、安全说明](#no-1)
@@ -539,6 +541,7 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 ### 7. 如何安装 李跳跳（针对国产软件的快速跳过开屏广告等）：
 - 下载：https://www.downkuai.com/android/144622.html ；
 - 安装、打开 李跳跳，不做任何操作 -- 回到桌面，并长按“李跳跳”图标调出“关于” -- 在“关于”软件界面的最底部有个“···”按钮，点击并允许（这是小米拦截了软件的辅助功能，需要手动允许） -- 进入手设置里的“辅助设置Accessibility” -- “通用” -- “已下载软件” -- 打开李跳跳即可。 
+- 注意，这只是跳过广告，不能阻断广告。阻断广告请参考本章节第11条。
 
 ### 8. 开启Shizuku：
 - 安装 Shizuku（ https://github.com/RikkaApps/Shizuku/releases ）；
@@ -571,7 +574,7 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 
   - “多用户”下建议开启内存扩展，可以后台挂更多程序，切换系统也可以在个自系统里持续正常运行。
 
-### 10. 激活GMS消息推送（FCM）
+### 10. 激活GMS消息推送（FCM）：
 
 现在在大陆iOS中，除了Gmail消息可以正常接收，其它应用的消息推送全挂了（一些著名App除外）。
 
@@ -587,19 +590,22 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 - 保证“省电策略会不要杀掉 GMS 后台”，Google Play和对应App要加入到“不限制后台”。
 - 如果注册了FCM的app消息推送出现不及时的情况，锁屏10s+再解锁屏幕一次就好了。
 
-### 11. 利用“本地VPN DNS”来自定义App联网规则（屏蔽广告、阻断联网、添加机场）：
+### 11. 利用“VPN DNS”来自定义App联网规则（屏蔽广告、阻断联网、添加机场）：
 
-下载最新版BlockADs：https://blockads.pwhs.app 。
+下载BlockADs（开源+免费）：https://blockads.pwhs.app 。
 
-或：https://github.com/pass-with-high-score/blockads-android/releases 。
+备用地址：https://github.com/pass-with-high-score/blockads-android/releases 。
 
-设置：模式选本地，VPN设置在“手机系统设置”里设置成“始终开启VPN，未开启VPN时阻断所有连接”；我导入crt证书时发现小米并不能手动导入成功，可能是因为之前卸载了某个校验软件导致的，这个问题暂时保留。
+如何设置：
 
-特性：
+模式选本地，VPN设置在“手机系统设置”里设置成“始终开启VPN，未开启VPN时阻断所有连接”；我导入crt证书时发现小米并不能手动导入成功，可能是因为之前卸载了某个校验软件导致的，这个问题暂时保留。
+
+主要特性：
 
 - 屏蔽App广告；
-- 阻断App联网（ 小米手机管家com.miui.securitycenter 中有的App不能被阻断联网，在这里可以利用BlockADs全部阻断掉。注意“GMS服务、Google Play、微信”等最好不要阻断联网）；
-- 可以添加机场账号，但是与别的VPN软件不能同时开启。
+- 阻断App联网（包含用户App和系统App。 小米手机管家com.miui.securitycenter 中有的App不能被阻断联网，在这里可以利用BlockADs全部阻断掉。注意“GMS服务、Google Play、微信”等最好不要阻断联网。）；
+- 可以添加机场账号，但是与别的VPN软件不能同时开启；
+- 你可以用这个软件阻断你不想卸载和卸载会卡米的App的联网，因此如果你是基于Android17的OS4，强烈推荐此方法。
 
 
 ------
