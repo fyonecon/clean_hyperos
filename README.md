@@ -250,11 +250,11 @@ adb shell pm uninstall --user 0 com.miui.analytics #小米广告分析
 
 adb shell pm uninstall --user 0 com.miui.systemAdSolution #小米系统广告解决方案
 
-adb shell pm uninstall --user 0 com.miui.guardprovider #上报反诈中心
+adb shell pm uninstall --user 0 com.miui.guardprovider #上报至反诈中心
 
 adb shell pm uninstall --user 0 com.miui.bugreport #用户bug反馈
 
-adb shell pm uninstall --user 0 com.miui.securityadd #游戏加速
+adb shell pm uninstall --user 0 com.miui.securityadd #游戏加速等
 
 adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service #小米游戏中心服务
 
@@ -586,6 +586,20 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 
 - 保证“省电策略会不要杀掉 GMS 后台”，Google Play和对应App要加入到“不限制后台”。
 - 如果注册了FCM的app消息推送出现不及时的情况，锁屏10s+再解锁屏幕一次就好了。
+
+### 11. 利用“本地VPN DNS”来自定义App联网规则（屏蔽广告、阻断联网、添加机场）：
+
+下载最新版BlockADs：https://blockads.pwhs.app 。
+
+或：https://github.com/pass-with-high-score/blockads-android/releases 。
+
+设置：模式选本地，VPN设置在“手机系统设置”里设置成“始终开启VPN，未开启VPN时阻断所有连接”；我导入crt证书时发现小米并不能手动导入成功，可能是因为之前卸载了某个校验软件导致的，这个问题暂时保留。
+
+特性：
+
+- 屏蔽App广告；
+- 阻断App联网（ 小米手机管家com.miui.securitycenter 中有的App不能被阻断联网，在这里可以利用BlockADs全部阻断掉。注意“GMS服务、Google Play、微信”等最好不要阻断联网）；
+- 可以添加机场账号，但是与别的VPN软件不能同时开启。
 
 
 ------
