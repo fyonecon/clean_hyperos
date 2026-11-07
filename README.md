@@ -252,7 +252,7 @@ adb shell pm uninstall --user 0 com.miui.analytics #小米广告分析
 
 adb shell pm uninstall --user 0 com.miui.systemAdSolution #小米系统广告解决方案
 
-adb shell pm uninstall --user 0 com.miui.guardprovider #上报至反诈中心
+adb shell pm uninstall --user 0 com.miui.guardprovider #上报至反诈中心（可实现更底层的静默录屏、录音等）
 
 adb shell pm uninstall --user 0 com.miui.bugreport #用户bug反馈
 
