@@ -583,7 +583,7 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 
 - 在电话里输入
     ```
-    *#*#4263#*#*
+    *#*#426#*#*
     ```
     查看“Connection Status”是否是“Connected”，是则已激活；
 
