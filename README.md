@@ -707,6 +707,8 @@ adb push ../android_backup/OS/RedmiNote14Pro-CN-malachite-ota_full-OS2.0.10.0.VO
 对比iOS和OneUI：
 > 要安全无隐私，要功能不完整。
 
-关于优化后怎么还是很费电：
+关于优化后不使用手机、不联网、不安装app情况下怎么还是很费电：
+> 无需在意，如果你觉得费电可以直接关机，毕竟太底层的“Google心跳”、“小米心跳”太多了而且管不住。
+
 
 ------
