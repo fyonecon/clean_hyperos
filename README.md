@@ -272,9 +272,9 @@ adb shell pm uninstall --user 0 com.xiaomi.security.onetrack #用户数据收集
 
 adb shell pm uninstall --user 0 com.mobiletools.systemhelper #运营商服务：中联通。注册机主手机号、位置、硬件等用于信息收集（含有百度地图SDK）。这个实际上不区分你用哪家的SIM卡。
 
-###adb shell pm uninstall --user 0 com.miui.dmregservice #运营商服务：中移动。-待定-
+#adb shell pm uninstall --user 0 com.miui.dmregservice #运营商服务：中移动。-敏感权限较多，待定-
 
-###adb shell pm uninstall --user 0 com.xiaomi.registration  #运营商服务：中电信。-比较干净，阻断联网即可-
+#adb shell pm uninstall --user 0 com.xiaomi.registration  #运营商服务：中电信。-敏感权限较多，待定-
 
 
 ```
@@ -400,6 +400,8 @@ adb shell pm uninstall --user 0 com.xiaomi.bluetooth #小米额外的蓝牙服�
 #############adb shell pm uninstall --user 0 com.xiaomi.xmsfkeeper #⚠️小米服务框架Keeper
 
 ############adb shell pm uninstall --user 0 com.miui.securitycore #⚠️系统功能服务组件（应用双开、手机分身、系统多开、边缘触控）
+
+############ 别删！adb shell pm uninstall --user 0 miui.systemui.plugin #⚠️MIUI覆盖原生安卓的下拉菜单、音量操作等。别删！
 
 #adb shell pm uninstall --user 0 com.miui.core #MIUI SDK（自动安装系统软件、SDK等）
 
@@ -724,9 +726,6 @@ adb push ../android_backup/OS/RedmiNote14Pro-CN-malachite-ota_full-OS2.0.10.0.VO
 
 关于优化后不使用手机、不联网、不安装app情况下怎么还是很费电：
 > 无需在意，如果你觉得费电可以直接关机，毕竟太底层的“Google心跳”、“小米心跳”太多了而且管不住。
-
-
-⚠️ 本对照表仅限自用和学习。⚠️注意甄敏感肌发布的澄清、抹灰、敲打的视频，这不分哪家厂商，个人信息安全只有0次和无数次，预防电信敲诈从我做起。
 
 
 ------
