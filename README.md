@@ -399,9 +399,9 @@ adb shell pm uninstall --user 0 com.xiaomi.bluetooth #小米额外的蓝牙服�
 
 #############adb shell pm uninstall --user 0 com.xiaomi.xmsfkeeper #⚠️小米服务框架Keeper
 
-############adb shell pm uninstall --user 0 com.miui.securitycore #⚠️系统功能服务组件（应用双开、手机分身、系统多开、边缘触控）
+############adb shell pm uninstall --user 0 com.miui.securitycore #⚠️系统功能服务组件（应用双开、手机分身、系统多开、边缘触控。如果你已经用过“应用双开”功能，但是直接删除了本com.miui.securitycore，那么手机主系统里将有这个“双开空间”里面的残余App运行，adb删不掉这种残余App，建议先删掉“双开空间”< 步骤：设置-应用-右上角菜单删除双开空间（没有开过双系统就没有这个删除菜单） >，再卸载此com.miui.securitycore。此外，对于此“双开空间”，一定会泄漏你其它“Mutil-User多用户系统”里面的App列表，对隐私敏感的用户可以用「删掉“双开空间”+卸载com.miui.securitycore」双保险。）
 
-############ 别删！adb shell pm uninstall --user 0 miui.systemui.plugin #⚠️MIUI覆盖原生安卓的下拉菜单、音量操作等。别删！
+############ 别删！adb shell pm uninstall --user 0 miui.systemui.plugin #⚠️MIUI覆盖原生安卓的下拉控制中心、音量操作等。别删！
 
 #adb shell pm uninstall --user 0 com.miui.core #MIUI SDK（自动安装系统软件、SDK等）
 
@@ -575,15 +575,12 @@ https://github.com/fyonecon/clean_hyperos/releases/download/HyperOS3-20260428/Ap
 
 高级玩法：
 
-  - ⚠️“分身用户”的SecurityCore删除后会自动恢复，而“多用户”不会。
-
+  - ⚠️“分身用户”的com.miui.securitycore删除后会自动恢复，而“多用户”不会。
   - ⚠️“分身用户”在使用几天后可能遇到锁屏密码失效的问题（会彻底丢失资料）。建议使用“Multi User 多用户”，极不建议使用“分身用户”。
-
   - ⚠️“多用户”的第一个系统可能在关闭“系统优化”后可能只能从Play商店安装app，无法从比如文件夹安装App。解决办法：开几个用户尝试留下功能正常的多用户。
-
   - ⚠️⚠️关于在主系统或者有“访问正在运行程序”权限的App可以通过“进程残留、RAM残留、UsageStats”跨系统访问到“多用户”系统里面运行过的App的名单。【消除办法是：在使用完“多用户”后，请重启一次手机或者锁屏一次手机，避免HyperOS安全机制缺陷造成的跨系统App名单泄露】。这是使用HyperOS中总结的系统Bug，无法确定是否真实存在，也可能不是后门或者不是隐藏Api。如果主系统中App都是安全可信权限的，可以忽略上面内容。
-
   - “多用户”下建议开启内存扩展，可以后台挂更多程序，切换系统也可以在个自系统里持续正常运行。
+  - 在手机主系统里面开启了“双开空间”，即双开应用所在的系统里面，一定会泄漏你的“多用户系统”里面的App列表。建议先删掉“双开空间”< 步骤：设置-应用-右上角菜单删除双开空间（没有开过双系统就没有这个删除菜单） >，再卸载com.miui.securitycore。
 
 ### 10. 激活GMS消息推送（FCM）：
 
