@@ -1,8 +1,8 @@
 
 ️可用[adb shell am get-current-user]查看当前用户标号。
-⚠️粘贴到adb-cmd里面可以一次性全部运行。
+⚠️粘贴到adb-cmd里面可以一次性全部运行。失败的程序可能是未开启高级开发者模式。
 
-更新于2026-04。适配HyperOS 1/2/3。
+更新于2026-04，2026-11。适配HyperOS 1/2/3。
 
 #=======================适合CN=====================
 
@@ -144,6 +144,14 @@ adb shell pm uninstall --user 10 com.miui.backup;
 
 adb shell pm uninstall --user 10 com.xiaomi.cameramind
 
+adb shell pm uninstall --user 10 com.xiaomi.finddevice
+
+adb shell pm uninstall --user 10 com.miui.securitycore
+
+adb shell pm uninstall --user 10 com.miui.dmregservice
+
+adb shell pm uninstall --user 10 com.xiaomi.registration
+
 
 #==========================适合国际==================
 
@@ -199,5 +207,7 @@ adb shell cmd package install-existing com.android.camera #小米相机
 adb shell cmd package install-existing com.miui.core #（系统SDK API）
 
 adb shell cmd package install-existing com.miui.home #小米桌面
+
+adb shell cmd package install-existing com.android.fileexplorer #小米文件管理器
 
 #============================================

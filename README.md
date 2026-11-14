@@ -1,7 +1,7 @@
 
 # <a id="no-0"></a>《小米手机系统优化对照表及注解》
 
-更新时间：2026-11-10（补充版），适配HyperOS1、HyperOS2、HyperOS3 ，可能仅限国行版。PS，基于Android17的HyperOS4只能用disable和enable，因此此教程可能无法适应于OS4。
+更新时间：2026-11-14（玩机细节补充版），适配HyperOS1、HyperOS2、HyperOS3 ，可能仅限国行版。PS，基于Android17的HyperOS4只能用disable和enable，因此此教程可能无法适应于OS4。
 
 原创教程地址： https://github.com/fyonecon/clean_hyperos 。
 
@@ -62,7 +62,7 @@ com.miui.miwallpaper 小米壁纸（屏幕直接黑屏，任何东西都看不�
 
 ⚠️两种开发者模式说明：
   - 初级开发者模式：在开发者模式的“USB调试、无线调试”这2个按钮。能删除大多数系统应用。【删除不了最核心系统应用但也不能避免卡米】；
-  - 高级级开发者模式：在开发者模式的“USB调试、USB调试（安全模式）、无线调试”这3个按钮。其中打开“USB调试（安全模式）”时要求登录小米账号com.xiaomi.account + 有安全服务com.miui.securitycenter软件，此开关打开后，可删除一些系统保护的软件如小米finddevice。【可删除最核心系统应用但也不能避免卡米】；
+  - 高级开发者模式：在开发者模式的“USB调试、USB调试（安全模式）、无线调试”这3个按钮。其中打开“USB调试（安全模式）”时要求登录小米账号com.xiaomi.account + 有安全服务com.miui.securitycenter软件，此开关打开后，可删除一些系统保护的软件如小米finddevice。【可删除最核心系统应用但也不能避免卡米】。高级开发者模式可以adb安装离线APK程序；
 
 ### 6. 澎湃2比澎湃1好用，推荐澎湃2；澎湃3比澎湃2好用，推荐澎湃3。使用本教程从2升级到3重启时可能会卡米，建议先手动备份2文件系统到电脑里面，再升级到3；
 
@@ -272,9 +272,9 @@ adb shell pm uninstall --user 0 com.xiaomi.security.onetrack #用户数据收集
 
 adb shell pm uninstall --user 0 com.mobiletools.systemhelper #运营商服务：中联通。注册机主手机号、位置、硬件等用于信息收集（含有百度地图SDK）。这个实际上不区分你用哪家的SIM卡。
 
-#adb shell pm uninstall --user 0 com.miui.dmregservice #运营商服务：中移动。-敏感权限较多，待定-
+adb shell pm uninstall --user 0 com.miui.dmregservice #运营商服务：中移动。超范围定时收集隐私。
 
-#adb shell pm uninstall --user 0 com.xiaomi.registration  #运营商服务：中电信。-敏感权限较多，待定-
+adb shell pm uninstall --user 0 com.xiaomi.registration  #运营商服务：中电信。超范围定时收集隐私。
 
 
 ```
@@ -421,6 +421,8 @@ adb shell pm uninstall --user 0 com.miui.securitycenter.securitycenter_phone_ove
 
 adb shell pm uninstall --user 0 com.android.quicksearchbox #桌面搜索
 
+#adb shell pm uninstall --user 0 com.android.fileexplorer #小米文件管理器（与安卓自带的文件管理器是两个东西。会定时发送一些安全相关的东西，猜测是使用过的敏感日志。）
+
 #######adb shell pm uninstall --user 0 com.miui.personalassistant #桌面负一屏（小米小部件、安卓小部件、负一平智能助理）
 
 ########################## 别删！adb shell pm uninstall --user 0 com.miui.home #⚠️小米桌面（可以用第三方桌面<如 https://lawnchair.app/ >替代。但是“最近任务、导航栏”消失。别删！）
@@ -477,8 +479,16 @@ adb shell pm uninstall --user 0 com.miui.backup #备份（只能备份有备案�
 
 # <a id="no-4"></a>四、小米系统扩展用法：
 
-### 1. 「可选」打开你的网络代理，在Google Play下载：
+### 1.1 「可选」打开你的网络代理，在Google Play下载：
 Google电话、Google短信、Google Photo、微信（Play版微信需要下载小程序扩展）等软件。
+
+### 1.2 小米文件管理器及安装离线APK程序：
+- 在主系统中，“小米文件管理”可以安装离线APK程序，但是系统自带的“原生安卓文件管理器”不可以安装离线APK程序；
+- 在多系统用户中，两种文件管理器都可以安装离线APK程序；
+- “小米文件管理”会定时发送疑似使用日志（sec.miui.com），建议高敏感用户删除此App。
+- 在关闭“小米系统优化”时直接用adb install命令安装离线apk时可能会报错：
+  - 方法一：用“小米文件管理”或其它三方文件管理器导入adb push的导入文件的方法进行手动安装。
+  - 方法二：在开发者模式同时打开的“USB调试、USB调试（安全模式）、无线调试”这3个按钮（详细请参考【第一章节的安装ADB环境】），就可以用adb install命令直接安装离线apk了。
 
 ### 2. 必备浏览器：
 - Firefox浏览器 添加ad扩展（国内IP不可用此功能）；
@@ -676,6 +686,8 @@ adb shell cmd package install-existing com.android.camera #小米相机
 adb shell cmd package install-existing com.miui.core #（系统SDK API）
 
 adb shell cmd package install-existing com.miui.home #小米桌面
+
+adb shell cmd package install-existing com.android.fileexplorer #小米文件管理器
 
 ```
 
