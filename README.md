@@ -254,15 +254,17 @@ adb shell pm uninstall --user 0 com.miui.analytics #小米广告分析
 
 adb shell pm uninstall --user 0 com.miui.systemAdSolution #小米系统广告解决方案
 
-adb shell pm uninstall --user 0 com.miui.guardprovider #上报至反诈中心（可实现更底层的静默录屏、录音等）
+adb shell pm uninstall --user 0 com.miui.guardprovider #上报至反诈中心
 
 adb shell pm uninstall --user 0 com.miui.bugreport #用户bug反馈
 
-adb shell pm uninstall --user 0 com.miui.securityadd #游戏加速等
+adb shell pm uninstall --user 0 com.miui.securityadd #游戏加速、抢红包等
 
 adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service #小米游戏中心服务
 
 adb shell pm uninstall --user 0 com.xiaomi.gamecenter #小米游戏中心（os1中可用）
+
+adb shell pm uninstall --user 0 com.xiaomi.minigame #小游戏（os3中可用）
 
 adb shell pm uninstall --user 0 com.xiaomi.macro #自动连招
 
@@ -270,7 +272,7 @@ adb shell pm uninstall --user 0 com.miui.misightservice #系统质量检测（os
 
 adb shell pm uninstall --user 0 com.xiaomi.security.onetrack #用户数据收集与统计
 
-adb shell pm uninstall --user 0 com.mobiletools.systemhelper #运营商服务：中联通。注册机主手机号、位置、硬件等用于信息收集（含有百度地图SDK）。这个实际上不区分你用哪家的SIM卡。
+adb shell pm uninstall --user 0 com.mobiletools.systemhelper #运营商服务：中联通。（含有百度地图SDK）。这个实际上不区分你用哪家的SIM卡。
 
 adb shell pm uninstall --user 0 com.miui.dmregservice #运营商服务：中移动。超范围定时收集隐私。
 
@@ -339,7 +341,7 @@ adb shell pm uninstall --user 0 com.miui.contentcatcher #应用扩展服务（�
 
 adb shell pm uninstall --user 0 com.unionpay.tsmservice.mi #银联统计
 
-#############adb shell pm uninstall --user 0 com.tencent.soter.soterserver #微信指纹支付（删了不影响微信支付）
+adb shell pm uninstall --user 0 com.tencent.soter.soterserver #微信指纹支付（删了不影响微信支付）
 
 adb shell pm uninstall --user 0 com.wapi.wapicertmanager #WAPI证书
 
@@ -369,9 +371,9 @@ adb shell pm uninstall --user 0 com.xiaomi.bluetooth #小米额外的蓝牙服�
 
 #adb shell pm uninstall --user 0 com.xiaomi.continuity.sdkapp #继续服务（协同播放、投屏？）
 
-#adb shell pm uninstall --user 0 com.miui.autoui.ext #？
+adb shell pm uninstall --user 0 com.miui.autoui.ext #？
 
-#adb shell pm uninstall --user 0 com.mi.AutoTest #售后测试
+adb shell pm uninstall --user 0 com.mi.AutoTest #售后测试
 
 #adb shell pm uninstall --user 0 com.miui.tsmclient #小米智能卡
 
@@ -401,11 +403,11 @@ adb shell pm uninstall --user 0 com.xiaomi.bluetooth #小米额外的蓝牙服�
 
 ############adb shell pm uninstall --user 0 com.miui.securitycore #⚠️系统功能服务组件（应用双开、手机分身、系统多开、边缘触控。如果你已经用过“应用双开”功能，但是直接删除了本com.miui.securitycore，那么手机主系统里将有这个“双开空间”里面的残余App运行，adb删不掉这种残余App，建议先删掉“双开空间”< 步骤：设置-应用-右上角菜单删除双开空间（没有开过双系统就没有这个删除菜单） >，再卸载此com.miui.securitycore。此外，对于此“双开空间”，一定会泄漏你其它“Mutil-User多用户系统”里面的App列表，对隐私敏感的用户可以用「删掉“双开空间”+卸载com.miui.securitycore」双保险。）
 
-############ 别删！adb shell pm uninstall --user 0 miui.systemui.plugin #⚠️MIUI覆盖原生安卓的下拉控制中心、音量操作等。别删！
+########################## 别删！adb shell pm uninstall --user 0 miui.systemui.plugin #⚠️MIUI覆盖原生安卓的下拉控制中心、音量操作等。别删！
 
-#adb shell pm uninstall --user 0 com.miui.core #MIUI SDK（自动安装系统软件、SDK等）
+adb shell pm uninstall --user 0 com.miui.core #MIUI SDK（自动安装系统软件、SDK等）
 
-#adb shell pm uninstall --user 0 com.miui.core.internal.services #（绑定在Android系统中，实际用途未找到未明确）
+adb shell pm uninstall --user 0 com.miui.core.internal.services #（绑定在Android系统中，实际用途未找到未明确）
 
 adb shell pm uninstall --user 0 com.miui.securitycenter.securitycenter_phone_overlay.config.overlay #(不知道)
 
@@ -415,9 +417,9 @@ adb shell pm uninstall --user 0 com.miui.securitycenter.securitycenter_phone_ove
 
 #############adb shell pm uninstall --user 0 com.google.android.webview #Webview(可能含有网址访问认证，Google Play里面下别的版本的webview代替)
 
-############# 别删！adb shell pm uninstall --user 0 com.android.thememanager #系统主题(设置)（主题、图标、壁纸设置好了以后再删除此App，或者使用第三方相册设置壁纸。别删！）
+########################## 别删！adb shell pm uninstall --user 0 com.android.thememanager #系统主题(设置)（主题、图标、壁纸设置好了以后再删除此App，或者使用第三方相册设置壁纸。别删！）
 
-#############adb shell pm uninstall --user 0 com.android.updater #小米系统更新（需要与“com.android.providers.downloads”下载器搭配才能更新系统）
+adb shell pm uninstall --user 0 com.android.updater #小米系统更新（需要与“com.android.providers.downloads”下载器搭配才能更新系统）
 
 adb shell pm uninstall --user 0 com.android.quicksearchbox #桌面搜索
 
@@ -457,7 +459,7 @@ adb shell pm uninstall --user 0 com.miui.cloudbackup #小米云备份
 
 adb shell pm uninstall --user 0 com.miui.cloudservice #小米云服务（查找设备<仅能中国大陆ID>、同步“相册、蓝牙、笔记、录音”，此app可能与小米账号联动上报用户串联信息。可以用GooglePhoto、GoogleKeep、OneDrive代替）
  
-#adb shell pm uninstall --user 0 com.xiaomi.micloud.sdk #小米云服务SDK
+adb shell pm uninstall --user 0 com.xiaomi.micloud.sdk #小米云服务SDK
 
 adb shell pm uninstall --user 0 com.miui.micloudsync #小米云同步（仅同步“联系人、通话、短信、安全服务、Wi-Fi”，可以用Google服务代替。）
 
