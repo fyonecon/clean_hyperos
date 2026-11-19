@@ -335,6 +335,8 @@ adb shell pm uninstall --user 0 com.xiaomi.ab #小米售后支持
 
 adb shell pm uninstall --user 0 com.miui.phrase #常用语（无卵用）
 
+#adb shell pm uninstall --user 0 com.xiami.barrage #小弹窗
+
 adb shell pm uninstall --user 0 com.miui.contentcatcher #应用扩展服务（也与广告有关）
 
 #adb shell pm uninstall --user 0 com.xiaomi.payment #米币支付（含有银联SDK）
